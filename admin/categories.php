@@ -1,4 +1,4 @@
-<?php  include "includes/header.php" ?>
+ <?php  include "includes/header.php" ?>
     
     <div id="wrapper">
 
@@ -8,7 +8,7 @@
 
      
         <div id="page-wrapper">
-
+ 
             <div class="container-fluid">
 
                 <!-- Page Heading -->
@@ -32,9 +32,26 @@
 
                             </form>
     
-                        </div>
-                        
+                        </div><!--Add Category -->
 
+                        <div class="col-xs-6">
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Category Title</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>..........</td>
+                                        <td>.............</td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
 
                     </div>
                 </div>
