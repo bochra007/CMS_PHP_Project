@@ -20,8 +20,7 @@
                     while ($rows=mysqli_fetch_assoc($select_all_categories)){
                         $title=$rows['cat_title'];
                         ?>
-                        <li><a href="#"><?php echo $title ?></a>
-                        </li>
+                        <li><a href="#"><?php echo $title ?></a></li>
                         <?php 
                    
                     }

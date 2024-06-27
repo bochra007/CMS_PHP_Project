@@ -1,3 +1,6 @@
+<?php ob_start(); ?>
+
+
 <?php include "../include/db.php";
 //include_once "..." faire l include une seule fois
  ?>
