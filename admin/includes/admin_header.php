@@ -1,9 +1,12 @@
-<?php ob_start(); ?>
 
 
 <?php include "../include/db.php";
+include "functions.php";
 //include_once "..." faire l include une seule fois
  ?>
+
+<?php ob_start(); ?>
+
 
 
 <!DOCTYPE html>
