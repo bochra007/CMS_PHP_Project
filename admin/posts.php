@@ -18,37 +18,32 @@
                             All Posts
                             <small>Author</small>
                         </h1>
+                        <?php
+                        if(isset($_GET['source'])){
+                            $source = $_GET['source'];
 
-                    <table class="table table-bordered table-hover">
-                        <thead>
-                            <tr>
-                                <th>Id</th>
-                                <th>Author</th>
-                                <th>Title</th>
-                                <th>Category</th>
-                                <th>Status</th>
-                                <th>Image</th>
-                                <th>Tags</th>
-                                <th>Comments</th>
-                                <th>Date</th>
+                        }else {
+                            $source="";
+                        }
+                        switch($source){
+                            case  '34';
+                            echo "34";
+                            break;
 
+                            case '100';
+                            echo "100";
+                            break;
 
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>10</td>
-                                <td>Author</td>
-                                <td>Author*</td>
-                                <td>Author**</td>
-                                <td>Author***</td>
-                                <td>Author*****</td>
-                                <td>Author</td>
-                                <td>Author*</td>
-                                <td>Author**</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                            case "200";
+                            echo "200";
+                            break;
+
+                            default :
+                            include "includes/view_all_posts.php" ;
+
+                            break;
+                        }
+                        ?>
 
                     </div>
                 </div>
