@@ -25,13 +25,15 @@
                         }else {
                             $source="";
                         }
+
+                        //SWITCH STATEMENT 
                         switch($source){
                             case  'add_post';
                             include "includes/add_post.php" ;
                             break;
 
-                            case '100';
-                            echo "100";
+                            case 'edit_post';
+                            include "includes/edit_post.php" ;
                             break;
 
                             case "200";

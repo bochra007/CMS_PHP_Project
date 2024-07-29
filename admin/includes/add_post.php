@@ -30,15 +30,10 @@
 
             $create_post_query=mysqli_query($connection,$query);
             comfirmQuery($create_post_query);
-        
-
-
-
 }
  ?>
  
- 
- <form class="row g-3" method="post" enctype="multipart/form-data">
+ <form class="" method="post" enctype="multipart/form-data">
     <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Post Title </label>
     <input type="text" name="title" class="form-control" id="inputEmail4">
