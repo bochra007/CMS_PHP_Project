@@ -1,6 +1,26 @@
+<script>
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+    </script>
 
+<style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
 
-<form action="" method="post">
+        .loaded .fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+    
+    </style>
+<!--content fade-in-->
+
+<form action="" method="post" class="content fade-in">
 <div class="form-groupe">
     <label name="cat_title">Edite Category</label>
    

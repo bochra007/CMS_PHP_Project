@@ -1,4 +1,25 @@
-<table class="table table-bordered table-hover">
+<script>
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+    </script>
+
+<style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .loaded .fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    
+    </style>
+
+<table class="table table-bordered table-hover content fade-in">
                         <thead>
                             <tr>
                                 <th>Id</th>

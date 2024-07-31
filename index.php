@@ -2,10 +2,32 @@
 include "include/db.php";
 include "include/header.php";
 ?>
+<script>
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+    </script>
+    <style>
+       
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .loaded .fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    
+    </style>
+
 <!-- Navigation -->
 <?php include "include/navbar.php"; ?>
     <!-- Page Content -->
-    <div class="container">
+    <div class="container content fade-in">
 
         <div class="row">
 

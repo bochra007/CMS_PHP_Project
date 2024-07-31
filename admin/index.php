@@ -1,5 +1,27 @@
     <?php  include "includes/admin_header.php" ?>
     
+
+<script>
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+    </script>
+
+<style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .loaded .fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+    
+    </style>
+<!--content fade-in-->
     
     <div id="wrapper">
 
@@ -10,7 +32,7 @@
      
         <div id="page-wrapper">
 
-            <div class="container-fluid">
+            <div class="container-fluid content fade-in">
 
                 <!-- Page Heading -->
                 <div class="row">
