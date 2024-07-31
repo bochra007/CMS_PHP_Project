@@ -12,7 +12,12 @@ include "include/header.php";
             <!-- Blog Entries Column -->
             <div class="col-md-8">
                 <?php
-                $query="SELECT * FROM posts";
+
+            if (isset($_GET['category'])){
+             $post_category_id= $_GET['category']; 
+            }
+
+                $query="SELECT * FROM posts WHERE post_category_id=$post_category_id";
                 $select_all_posts_query=mysqli_query($connection,$query);
                 while($rows=mysqli_fetch_assoc($select_all_posts_query)){
                     $post_id=$rows['post_id'];

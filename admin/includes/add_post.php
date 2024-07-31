@@ -3,7 +3,7 @@
     if (isset($_POST['create_post'])){
         $post_title=$_POST["title"];
         $post_author=$_POST["author"];
-        $post_category_id=$_POST['post_category_id'];
+        $post_category_id=$_POST['post_category'];
         $post_status=$_POST['post_status'];
 
         $post_image=$_FILES['image']['name'];
@@ -29,28 +29,39 @@
  ?>
  
  <form class="" method="post" enctype="multipart/form-data">
-    <div class="col-md-6">
+    <div class="form-group">
     <label for="inputEmail4" class="form-label">Post Title </label>
     <input type="text" name="title" class="form-control" id="inputEmail4">
     </div>
-    <div class="col-md-6">
-    <label for="inputPassword4" class="form-label">Post Category Id</label>
-    <input type="text" name="post_category_id" class="form-control" id="inputPassword4">
+    <div class="form-group">
+        <select name="post_category" id="post_category">
+            <?php 
+            $query="SELECT * FROM categories ";
+            $select_all_categories_id=mysqli_query($connection,$query);
+            confirmQuery($select_all_categories_id);
+            while ($rows=mysqli_fetch_assoc($select_all_categories_id)){
+            $cat_id=$rows['cat_id'];
+            $cat_title=$rows['cat_title'];
+            echo "<option value='{$cat_id}'>{$cat_title}</option>";
+            }
+            ?>
+
+        </select>
     </div>
-    <div class="col-md-6">
+    <div class="form-group">
     <label for="inputAddress" class="form-label">Post Author</label>
     <input type="text" name="author" class="form-control" id="inputAddress" placeholder="">
     </div>
-    <div class="col-md-6">
+    <div class="form-group">
     <label for="inputAddress2" class="form-label">Post Status</label>
     <input type="text" name="post_status" class="form-control" id="inputAddress2" placeholder="">
     </div>
-    <div class="col-md-6">
+    <div class="form-group">
   <label for="formFile" class="form-label">Default file input example</label>
   <input class="form-control" name="image" type="file" id="formFile">
 </div>
    
-<div class="col-md-6">
+<div class="form-group">
     <label for="inputAddress2" class="form-label">Post Tags</label>
     <input type="text" name="post_tags" class="form-control" id="inputAddress2" placeholder="">
     </div>
